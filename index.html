@@ -4,7 +4,122 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!--Pie Chart-->
+    <main id="container">
+      <header id="navbar">
+        <h1 id="title-and-day">Transparency - Sunday</h1>
+        <figure id="foods-diary-button">
+          <span id="food-diary-text"><h2>Diary</h2></span>
+        </figure>
+      </header>
+      <!--totals-->
+      <section class="totals">
+        <span class="listed-food-macros"
+          ><p>Protien</p>
+          <p class="protien-val">0</p></span
+        >
+        <span class="listed-food-macros"
+          ><p>Carbs</p>
+          <p class="carbs-val">0</p></span
+        >
+        <span class="listed-food-macros"
+          ><p>Fats</p>
+          <p class="fats-val">0</p></span
+        >
+      </section>
+      <!--Pie Chart-->
+      <section id="pie-chart">
+        <div class="circle"></div>
+      </section>
+      <!--Input Section-->
+      <section id="create-food-item">
+        <figure id="protien" class="macros">
+          <input
+            type="text"
+            name="protien"
+            id="protien-input"
+            placeholder="Protien"
+          />
+        </figure>
+
+        <figure id="carbs" class="macros">
+          <input
+            type="text"
+            name="carbs"
+            id="carbs-input"
+            placeholder="Carbs"
+          />
+        </figure>
+
+        <figure id="fats" class="macros">
+          <input type="text" name="fats" id="fats-input" placeholder="Fats" />
+        </figure>
+
+        <figure id="food-name">
+          <input type="text" id="food-name-input" placeholder="Food Name" />
+        </figure>
+
+        <figure id="submit-btn">
+          <input type="button" value="Submit" />
+        </figure>
+      </section>
+      <!--Food List for today-->
+      <section id="foods-list-section">
+        <ul id="foods-list">
+          <li class="listed-foods">
+            <section class="listed-food-stats">
+              <h3 class="listed-food-name">Food Name</h3>
+              <i class="fa-solid fa-xmark li-x-icon"></i>
+              <span class="listed-food-macros"
+                ><p>Protien</p>
+                <p class="protien-val">50</p></span
+              >
+              <span class="listed-food-macros"
+                ><p>Carbs</p>
+                <p class="carbs-val">75</p></span
+              >
+              <span class="listed-food-macros"
+                ><p>Fats</p>
+                <p class="fats-val">10</p></span
+              >
+            </section>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+
+  <template id="food-li-template">
+    <li class="listed-foods">
+      <section class="listed-food-stats">
+        <h3 class="listed-food-name">
+          Food Name<i class="fa-solid fa-xmark li-x-icon"></i>
+        </h3>
+
+        <span class="listed-food-macros"
+          ><p>Protien</p>
+          <p class="protien-val">50</p></span
+        >
+        <span class="listed-food-macros"
+          ><p>Carbs</p>
+          <p class="carbs-val">75</p></span
+        >
+        <span class="listed-food-macros"
+          ><p>Fats</p>
+          <p class="fats-val">10</p></span
+        >
+      </section>
+    </li>
+  </template>
 </html>

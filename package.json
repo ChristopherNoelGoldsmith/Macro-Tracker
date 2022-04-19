@@ -1,0 +1,26 @@
+{
+  "name": "macros",
+  "version": "1.0.0",
+  "description": "A maronutrient and cal tracking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "sass": "sass --watch ./sass/style.scss main.css --style compressed --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherNoelGoldsmith/Macro-Tracker.git"
+  },
+  "keywords": [
+    "macros"
+  ],
+  "author": "Christopher Goldsmith\u001b[D\u001b[C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherNoelGoldsmith/Macro-Tracker/issues"
+  },
+  "homepage": "https://github.com/ChristopherNoelGoldsmith/Macro-Tracker#readme",
+  "dependencies": {
+    "sass": "^1.50.1"
+  }
+}
