@@ -1,0 +1,206 @@
+$title-text: 1.7rem;
+$large-text: 1.5rem;
+$med-text: 1rem;
+$small-text: 0.7rem;
+$primary-color: violet;
+$secondary-color: coral;
+$bg-color: azure;
+$small-padding: 2%;
+$xs-padding: 0.5%;
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //overflow: hidden;
+}
+
+main {
+    margin: auto;
+    background-color: $bg-color;
+    width: 100%;
+}
+
+// NAVBAR
+#navbar {
+    top: 0;
+    padding: $small-padding;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    background-color: $primary-color;
+
+    *> {
+        vertical-align: middle;
+    }
+
+    h1 {
+        font-size: $title-text;
+    }
+
+    h1::first-letter {
+        font-size: 105%;
+    }
+
+    figure {
+        padding: $small-padding;
+        margin: auto;
+
+        span h2 {
+            font-size: $med-text;
+        }
+    }
+
+}
+//Totals
+
+.totals{
+    display: flex;
+    flex-direction: row;
+    background-color: $secondary-color;
+    padding: $small-padding;
+    span{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+//PIE CHART!
+#pie-chart {
+    width: 25vh;
+    height: 25vh;
+    min-width: 200px;
+    min-height: 200px;
+    //background-color: $primary-color;
+    margin: auto;
+    padding: $small-padding;
+
+    div {
+        background-color: $secondary-color;
+        width: 95%;
+        height: 95%;
+        min-width: 180px;
+        min-height: 180px;
+        border-radius: 50%;
+        margin: $small-padding;
+    }
+}
+
+//Food item creation input
+#create-food-item {
+    width: 80vw;
+    height: 15vh;
+    padding: $small-padding;
+    display: grid;
+    background-color: $primary-color;
+    grid-template-areas:
+        "protien carbs fats"
+        "food-name food-name submit";
+    margin: auto;
+    overflow: hidden;
+    grid-gap: 2px;
+    align-items: center;
+
+    #protien {
+        grid-area: protien;
+    }
+
+    #carbs {
+        grid-area: carbs;
+    }
+
+    #fats {
+        grid-area: fats;
+    }
+
+    .macros {
+        width: 20vw;
+        margin: auto;
+
+        input {
+            text-align: center;
+            width: 20vw;
+            height: 5vh;
+        }
+    }
+
+    #food-name {
+        margin-left: auto;
+        width: 50vw;
+        grid-area: food-name;
+
+        input {
+            text-align: center;
+            width: 50vw;
+            height: 5vh;
+            font-size: $med-text;
+        }
+    }
+
+
+    #submit-btn {
+        margin-right: auto;
+        margin-left: 5vw;
+        width: 15vw;
+        grid-area: submit;
+
+        input {
+            border: none;
+            width: 15vw;
+            height: 5vh;
+        }
+    }
+}
+
+//List Styles
+
+#foods-list-section {
+    width: 100vw;
+    margin: auto;
+    padding: 5%;
+    background-color: $bg-color;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            background-color: $secondary-color;
+            height: 10vh;
+            border: 1px solid black;
+
+            .listed-food-stats {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr, 2fr;
+                .li-x-icon{
+                    z-index: 100;
+                    background-color: $bg-color;
+                    position: absolute;
+                }
+                .listed-food-name {
+                    grid-column: 1 / 4;
+                    text-align: center;
+                    padding: $xs-padding;
+                    align-self: center;
+                    background-color: $bg-color;
+                }
+
+                span {
+                    background-color: $bg-color;
+                    border: 1px solid black;
+                    font-size: $med-text;
+                    margin: auto;
+                    grid-row: 2 / 3;
+                    align-items: stretch;
+                    width: 25vw;
+                    padding: $xs-padding;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
